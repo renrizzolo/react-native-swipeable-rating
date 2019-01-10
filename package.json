@@ -1,0 +1,38 @@
+{
+  "name": "react-native-swipeable-rating",
+  "version": "0.0.1",
+  "description": "Star rating component with support for swipe and / or touch selection",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renrizzolo/react-native-swipeable-rating.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "Star",
+    "Rating",
+    "Rating",
+    "Swipeable"
+  ],
+  "author": "Ren Rizzolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renrizzolo/react-native-swipeable-rating/issues"
+  },
+  "homepage": "https://github.com/renrizzolo/react-native-swipeable-rating#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3"
+  }
+}
