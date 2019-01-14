@@ -6,17 +6,17 @@ import { shallow, mount } from 'enzyme';
 import SwipeableRating, { styles } from '../lib/swipeable-rating';
 import Star from '../lib/components/Star';
 
-const filledIcon =
-  <View>
+const filledIcon = (size, gap, rating ) =>
+  <View style={{width: size, marginRight: gap}}>
     <Text>
-      full
+      {rating}
     </Text>
   </View>;
 
-const emptyIcon =
-  <View>
+const emptyIcon = ( size, gap, rating ) =>
+  <View style={{ width: size, marginRight: gap }}>
     <Text>
-      empty
+      {rating}
     </Text>
   </View>;
 
@@ -42,8 +42,8 @@ describe('SwipeableRating shallow with Enzyme', () => {
     />
   );
 
-  console.log(wrapper.debug());
-  console.log(wrapper.props());
+  // console.log(wrapper.debug());
+  // console.log(wrapper.props());
 
   it('renders the correct filled/unfilled stars', () => {
     expect(
@@ -59,8 +59,7 @@ describe('SwipeableRating shallow with Enzyme', () => {
 });
 
 describe('SwipeableRating mounted with Enzyme', () => {
-
-
+  
   const wrapper = mount(
     <SwipeableRating
       swipeable={false}
@@ -69,15 +68,11 @@ describe('SwipeableRating mounted with Enzyme', () => {
       emptyIcon={emptyIcon}
     />
   );
- 
+    // console.log(wrapper.debug())
   it('renders custom icon components', () => {
   expect(
     wrapper.containsAllMatchingElements(
-      [emptyIcon, filledIcon]
+      [filledIcon(24, 0, 1), emptyIcon(24, 0, 1)]
     )).toBe(true);
   });
-
-  const star = mount(<Star n={1} filled={true}/>);
-  console.log(star.debug());
-
 });
