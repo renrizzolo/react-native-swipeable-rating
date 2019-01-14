@@ -8,6 +8,8 @@ Star rating component with support for swipe and / or touch selection
 
 `react-native-vector-icons` package is required, [set it up](https://github.com/oblador/react-native-vector-icons) if you haven't already.
 
+install > `npm i react-native-swipeable-rating`
+
 ### Basic example
 
 ```javascript
