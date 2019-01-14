@@ -6,17 +6,17 @@ import { shallow, mount } from 'enzyme';
 import SwipeableRating, { styles } from '../lib/swipeable-rating';
 import Star from '../lib/components/Star';
 
-const filledIcon = (size, gap, rating ) =>
-  <View style={{width: size, marginRight: gap}}>
+const filledIcon = (size, gap, color ) =>
+  <View style={{ width: size, marginRight: gap, backgroundColor: color }}>
     <Text>
-      {rating}
+      *
     </Text>
   </View>;
 
-const emptyIcon = ( size, gap, rating ) =>
-  <View style={{ width: size, marginRight: gap }}>
+const emptyIcon = ( size, gap, _, emptyColor ) =>
+  <View style={{ width: size, marginRight: gap, backgroundColor: emptyColor }}>
     <Text>
-      {rating}
+      _
     </Text>
   </View>;
 
@@ -66,13 +66,15 @@ describe('SwipeableRating mounted with Enzyme', () => {
       rating={4}
       filledIcon={filledIcon}
       emptyIcon={emptyIcon}
+      color="blue"
+      emptyColor="red"
     />
   );
     // console.log(wrapper.debug())
-  it('renders custom icon components', () => {
+  it('renders custom icon component functions and passes in color props', () => {
   expect(
     wrapper.containsAllMatchingElements(
-      [filledIcon(24, 0, 1), emptyIcon(24, 0, 1)]
+      [filledIcon(24, 0, 'blue'), emptyIcon(24, 0, '', 'red')]
     )).toBe(true);
   });
 });
