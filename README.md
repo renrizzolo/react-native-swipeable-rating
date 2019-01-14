@@ -45,6 +45,8 @@ There are a few different ways the component can be used:
 - `rating={n}`, `swipeable={false}` and no `onPress` will make it a dumb/static component that displays a rating.
 - `swipeable={false}` with an `onPress` function will make the individual stars a tappable `TouchableOpacity`.
 
+
+
 ## Props
 
 | Prop name        					| type        | default 			   | Desc               | Required? |
@@ -61,9 +63,11 @@ There are a few different ways the component can be used:
 |minRating                  |number       |1                 |The minimum rating to allow                     |          |
 |maxRating                  |number       |5                 |The maximum rating to allow / amount of stars to display   |          |
 |allowHalves                |boolean      |false             |Allow ratings to go up in increments of 0.5 instead of 1                         |          |
-|filledIcon                 |string or function |'star'        |The MaterialIcons icon to use for the filled star OR your custom component function (receives `size`, `gap`, `rating` args)      |          |
-|halfFilledIcon             |string or function |'star-half'   |The MaterialIcons icon to use for the half filled star OR your custom component function (receives `size`, `gap`, `rating` args) |          |
-|emptyIcon                  |string or function |'star-border' |The MaterialIcons icon to use for the empty star OR your custom component function (receives `size`, `gap`, `rating` args)       |          |
+|filledIcon                 |string or function |'star'        |The MaterialIcons icon to use for the filled star OR your custom component function (receives `size`, `gap`, number args)      |          |
+|halfFilledIcon             |string or function |'star-half'   |The MaterialIcons icon to use for the half filled star OR your custom component function (receives `size`, `gap`, number args) |          |
+|emptyIcon                  |string or function |'star-border' |The MaterialIcons icon to use for the empty star OR your custom component function (receives `size`, `gap`, number args)       |          |
 
-*`gap`, `color`, `emptyColor`, `size` will have no effect on custom icon components. 
-You must make your custom icon components `size` (+ `gap`, if you use it) width, so the correct swipe distances can be calculated.
+You must make your custom icon components `size` (+ `gap`, if you use it) total width, so the correct swipe distances can be calculated.
+
+`size`, `gap`, `color`, `emptyColor`, `n` (the icon's rating number (index) beginning at 1) are passed to the custom icon functions for convenience.
+
