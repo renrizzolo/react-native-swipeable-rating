@@ -19,4 +19,4 @@ export interface SwipeableRatingProps {
   emptyIcon?: string | (() => void);
 }
 
-declare class SwipeableRating extends React.Component<SwipeableRatingProps> {}
+export class SwipeableRating extends React.Component<SwipeableRatingProps> {}
