@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Star rating component with support for swipe and / or touch selection",
   "main": "index.js",
+  "types": "index.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -20,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renrizzolo/react-native-swipeable-rating.git"
+    "url": "git+https://github.com/LongNguyen206/react-native-swipeable-rating.git"
   },
   "keywords": [
     "React",
@@ -59,6 +60,6 @@
     "prop-types": "15.*"
   },
   "dependencies": {
-    "jsdom": "^11.1.0"
+    "jsdom": "^11.5.1"
   }
 }
