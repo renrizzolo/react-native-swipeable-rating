@@ -3,7 +3,7 @@ import { ViewPropTypes } from 'react-native';
 
 export interface SwipeableRatingProps {
   rating: number;
-  onPress?: void;
+  onPress?( rating: number ): void;
   swipeable?: boolean;
   xOffset?: number;
   style?: ViewPropTypes.style;
@@ -19,4 +19,4 @@ export interface SwipeableRatingProps {
   emptyIcon?: string | (() => void);
 }
 
-export class SwipeableRating extends React.Component<SwipeableRatingProps> {}
+declare class SwipeableRating extends React.Component<SwipeableRatingProps> {}
