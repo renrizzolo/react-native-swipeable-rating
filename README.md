@@ -15,7 +15,7 @@ install > `npm i react-native-swipeable-rating`
 ```javascript
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import SwipeableRating from 'react-native-swipeable-rating';
+import { SwipeableRating } from 'react-native-swipeable-rating';
 
 class MyStarRating extends Component {
   state = {
