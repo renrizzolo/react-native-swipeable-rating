@@ -1,5 +1,3 @@
-Original credit goes to [renrizzolo/react-native-swipeable-rating](https://github.com/renrizzolo/react-native-swipeable-rating)
-
 # react-native-swipeable-rating
 Star rating component with support for swipe and / or touch selection
 
