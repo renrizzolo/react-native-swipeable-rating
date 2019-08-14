@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Star rating component with support for swipe and / or touch selection",
   "main": "index.js",
+  "typings": "index.d.ts",
   "directories": {
     "lib": "lib"
   },
