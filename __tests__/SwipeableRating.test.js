@@ -42,9 +42,6 @@ describe('SwipeableRating shallow with Enzyme', () => {
     />
   );
 
-  // console.log(wrapper.debug());
-  // console.log(wrapper.props());
-
   it('renders the correct filled/unfilled stars', () => {
     expect(
       wrapper.containsAllMatchingElements([
@@ -70,7 +67,7 @@ describe('SwipeableRating mounted with Enzyme', () => {
       emptyColor="red"
     />
   );
-    // console.log(wrapper.debug())
+  
   it('renders custom icon component functions and passes in color props', () => {
   expect(
     wrapper.containsAllMatchingElements(
