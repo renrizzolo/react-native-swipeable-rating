@@ -42,11 +42,13 @@ class MyStarRating extends Component {
 }
 ```
 
+*See the (full example app)[https://github.com/renrizzolo/react-native-swipeable-rating-demo]*
+
 There are a few different ways the component can be used:
 - The above example works with swiping and tapping on individual stars.
 - `rating={n}`, `swipeable={false}` and no `onPress` will make it a dumb/static component that displays a rating.
 - `swipeable={false}` with an `onPress` function will make the individual stars a tappable `TouchableOpacity`.
-
+- if you use `allowHalves` you will also need to change `minRating` to `0.5`
 
 
 ## Props
