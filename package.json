@@ -60,6 +60,6 @@
     "prop-types": "15.*"
   },
   "dependencies": {
-    "jsdom": "^11.1.0"
+    "jsdom": "^16.5.0"
   }
 }
